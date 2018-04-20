@@ -6,4 +6,6 @@ urlpatterns = [
     ##通过url函数设置url路由配置项
     #url(r'^index',views.index),
     path('',views.index,name='index')
+    ##name的作用,用于重定向?
+    ##
 ]
