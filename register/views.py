@@ -13,6 +13,6 @@ def index(request):
     #context = RequestContext(request,{})
     #3. 模板渲染:生成标准的html内容
     ##说明,上一步的注释了,为了就是说明,和django2.0前面的版本不不是同一个用法
-    res_html = temp.render({},request)
+    res_html = temp.render({'title':"今天测试django"},request)
     #4. 返回给浏览器
     return HttpResponse(res_html)
