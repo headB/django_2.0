@@ -3,7 +3,7 @@ from django.http import HttpResponse
 from django.template import loader,RequestContext
 # Create your views here.
 
-def index(request):
+def index(request,number):
 
     #使用模板文件
     #1.加载模板文件
@@ -13,6 +13,6 @@ def index(request):
     #context = RequestContext(request,{})
     #3. 模板渲染:生成标准的html内容
     ##说明,上一步的注释了,为了就是说明,和django2.0前面的版本不不是同一个用法
-    res_html = temp.render({'title':"今天测试django"},request)
+    res_html = temp.render({'title':"今天测试django",'list':range(8)},request)
     #4. 返回给浏览器
     return HttpResponse(res_html)
